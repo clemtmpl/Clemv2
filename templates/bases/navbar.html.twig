@@ -1,0 +1,23 @@
+<nav class="navbar" id="mynavbar">
+    <div class="navbar-nav">
+        <div class="center_responsive">
+            <a href="{{ path('home') }}">Accueil</a>
+            <a href="#competences">Compétences</a>
+            <a href="#cursus">Mon cursus</a>
+            <a href="#contact_me">Contact</a>
+        </div>
+    </div>
+
+    <div class="navbar-nav2" id="myLinks">
+        <div class="center_responsive">
+            <a href="{{ path('home') }}" onclick="myFunction()">Accueil</a>
+            <a href="#competences" onclick="myFunction()">Compétences</a>
+            <a href="#cursus" onclick="myFunction()">Mon cursus</a>
+            <a href="#contact_me" onclick="myFunction()">Contact</a>
+        </div>
+    </div>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</nav>

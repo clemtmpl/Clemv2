@@ -1,0 +1,324 @@
+#home {
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.sect_gen {
+  background-image: url("../assets/img/bg-home.png");
+  position: relative;
+
+  .pattern-bottom {
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/img/pattern-home2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .picture-home-content {
+    position: relative;
+    z-index: 1;
+
+    .losange_home {
+      height: 50vh;
+      width: 50vh;
+      position: absolute;
+      top: 50%;
+      left: 50%; /* à 50%/50% du parent référent */
+      transform: translate(-50%, -50%) rotate(45deg); /* décalage de 50% de sa propre taille */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 6px solid $primary-color;
+      overflow: hidden;
+      box-shadow: 2px 2px 5px rgb(0, 0, 0);
+      transition: all 0.3s;
+      cursor: pointer;
+
+      .losange-img {
+        width: 100%;
+        height: 69vh;
+        background-image: url("../assets/img/moi.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: rotate(-45deg);
+      }
+
+      &:hover {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.05);
+        box-shadow: 4px 4px 12px rgb(0, 0, 0);
+      }
+    }
+  }
+
+  .overlay_japon, .overlay_sport, .overlay_manga, .overlay_mode, .overlay_me {
+    position: absolute;
+    left: -3000px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    font-family: 'Belleza', sans-serif;
+    display: block;
+    transition: all 0.7s;
+  }
+
+  .pop-up {
+    z-index: 7;
+    height: 100vh;
+    width: 100%;
+    color: #dddddd;
+    padding: 2em 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .pop-pup_content {
+
+      h2 {
+        font-size: 3em;
+        color: #ffa500;
+        text-align: center;
+        margin-bottom: 2vh;
+      }
+
+      img {
+        width: 500px;
+        text-align: center;
+        display: flex;
+        margin: auto;
+      }
+    }
+  }
+
+  .overlay_japon .pop-pup_content img {
+    width: 400px;
+  }
+
+  .btnclose {
+    float: right;
+    font-size: 35pt;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 2em;
+    right: 4em;
+  }
+
+  .icon_responsive {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    background-color: #0f0f0f;
+    text-align: center;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    .icon_button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 1em 3em;
+
+      .icon {
+        width: 40px;
+      }
+    }
+
+    .circle_icon {
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+
+
+  .description-home-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 1;
+
+    span {
+      font-family: "Cormorant";
+      font-size: 7em;
+      color: $primary-color;
+      text-shadow: 1px 1px 3px #0f0f0f;
+      font-weight: bold;
+      letter-spacing: -5px;
+
+      &:nth-of-type(3), &:nth-of-type(4){
+        font-family: "Lato", sans-serif;
+        letter-spacing: 10px;
+        font-weight: 200;
+        text-transform: uppercase;
+        font-size: 5em;
+      }
+    }
+  }
+}
+
+@keyframes letterUp {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .sect_gen {
+    overflow: hidden;
+
+    .picture-home-content {
+
+      .losange_home {
+        height: 40vh;
+        width: 40vh;
+
+        .losange-img{
+          height: 55vh;
+        }
+      }
+    }
+
+    .description-home-content {
+
+      span {
+        font-size: 5em;
+      }
+    }
+
+    .barre_bottom, .barre_color {
+      display: none;
+    }
+
+    .pop-up {
+      padding: 2em 10em;
+      overflow-Y: scroll;
+
+      &::-webkit-scrollbar{
+        display: none;
+      }
+
+      .pop-pup_content {
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        img {
+          width: 300px;
+          text-align: center;
+          display: flex;
+          margin: auto;
+        }
+      }
+    }
+
+    .overlay_japon .pop-pup_content img {
+      width: 200px;
+    }
+
+    .circle_icon {
+      position: relative;
+      width: inherit;
+      border-radius: unset;
+      display: inline-block;
+      bottom: 0;
+
+      &:hover {
+        transition-duration: 0.4s;
+        transform: none;
+        background-color: #ffa500;
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  #home{
+    height: auto;
+  }
+
+  .sect_gen {
+
+    .pattern-bottom{
+      display: none;
+    }
+
+    .picture-home-content {
+      height: 50vh;
+
+      .losange_home {
+        height: 25vh;
+        width: 25vh;
+
+        .losange-img{
+          height: 34vh;
+        }
+      }
+    }
+
+    .description-home-content {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 3em;
+
+        &:nth-of-type(3), &:nth-of-type(4){
+          font-size: 2.25em;
+          text-align: center;
+        }
+      }
+    }
+
+    .icon_responsive{
+      position: relative;
+
+      .icon_button {
+        padding: 1em 1.5em;
+
+        .icon {
+          width: 40px;
+        }
+      }
+    }
+
+    .pop-up {
+      padding: 2em 2em;
+    }
+
+
+    .btnclose {
+      float: right;
+      font-size: 35pt;
+      cursor: pointer;
+      color: white;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+  }
+}

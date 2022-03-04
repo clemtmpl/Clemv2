@@ -1,0 +1,299 @@
+.about_me {
+  background-color: rgb(15, 15, 15);
+
+  h2{
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+    margin-top: 5vh;
+    color: $primary-color;
+    font-family: "Cormorant", serif;
+    letter-spacing: 2px;
+  }
+
+  .h2_line {
+    width: 15%;
+    height: 3px;
+    background-color: $primary-color;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+
+  /* --------- CURSUS ---------- */
+  .container_competences {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding: 2em 14em;
+
+    .fas {
+      font-size: 25em;
+      position: absolute;
+      top: 50%;
+      left: 50%; /* à 50%/50% du parent référent */
+      transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+      background-color: rgb(30, 30, 30);
+      color: transparent;
+      text-shadow: 2px 2px 3px rgba(40, 40, 40, 0.5);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+    }
+
+    .compétences {
+      width: 100%;
+    }
+
+    .competences_content_devops {
+      border-radius: 8px;
+      z-index: 1;
+      margin: auto;
+      position: relative;
+
+      h3 {
+        color: #ffa500;
+        padding: 1vh 0 1.3vh 0;
+        margin-bottom: 3vh;
+        text-transform: uppercase;
+        font-size: 1.4em;
+        letter-spacing: 2px;
+      }
+
+      .name_devops_skills {
+        .skills_name {
+          display: block;
+          width: 100%;
+          margin-bottom: 6px;
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: 600;
+          color: #dddddd;
+        }
+
+        .skills_bar {
+          background-color: #999;
+          width: 100%;
+          margin-bottom: 12px;
+          border-radius: 0 20px 20px 0;
+          z-index: 1;
+          color: #dddddd;
+          text-align: right;
+          font-size: 14px;
+          box-shadow: 1px 1px 1px 1px #111;
+          position: relative;
+          display: flex;
+
+          div {
+            padding: 5px 0;
+            background-color: #dddddd;
+            font-weight: 600;
+            text-shadow: 1px 1px 1px #000;
+          }
+
+          .waveskill {
+            background-image: url("../assets/img/wave3.png");
+            overflow: hidden;
+            width: 8px;
+            height: auto;
+            background-size: contain;
+            animation: animateWave 15s infinite linear;
+          }
+
+          .orange {
+            width: 80%;
+            color: #ff8308;
+          }
+
+          .blue {
+            width: 70%;
+            color: #261eff;
+          }
+
+          .mauve {
+            width: 50%;
+            color: #9a06ff;
+          }
+
+          .jaune {
+            width: 50%;
+            color: #ffba00;
+          }
+
+          .fluo {
+            width: 60%;
+            color: #ffea00;
+          }
+
+          .cyan {
+            width: 30%;
+            color: #2273b6;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes animateWave {
+    0% {
+      background-position-y: 300px;
+    }
+
+    100% {
+      background-position-y: 0;
+    }
+  }
+
+  .container_formation {
+    background-color: rgb(7, 7, 7);
+    padding: 2em 14em;
+
+    .formations {
+      position: relative;
+      margin: auto;
+      margin-bottom: 4vh;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        background-color: #EBEBEB;
+        top: 0;
+        bottom: 0;
+        left: 2px
+      }
+
+      .formation_content {
+        display: block;
+        margin: 1.3em 30px;
+        background-color: rgba(32, 32, 32, 0.7);
+        border-radius: 8px;
+        padding: 10px 15px;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
+        font-family: 'Belleza', sans-serif;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: -6px;
+          top: 50%; /* à 50%/50% du parent référent */
+          transform: translate(-50%, 0%); /* décalage de 50% de sa propre taille */
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 10px 11px 10px 0;
+          border-color: transparent rgba(30, 30, 30, 1) transparent transparent;
+        }
+
+        &::after {
+          content: '';
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          background-color: #EBEBEB;
+          border-radius: 100%;
+          left: -26px;
+          top: 50%; /* à 50%/50% du parent référent */
+          transform: translate(-50%, 0%); /* décalage de 50% de sa propre taille */
+        }
+
+        h3 {
+          font-family: "Cormorant", serif;
+          letter-spacing: 1.5px;
+          margin: 10px 0;
+          color: #123a48;
+          font-size: 1.5em;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+
+        h4 {
+          margin-bottom: 6px;
+          margin-left: 10px;
+          color: #fb9b17;
+          font-size: 1.1em;
+          font-weight: 400;
+          font-family: "Lato", sans-serif;
+        }
+
+        ul {
+          color: #dddddd;
+          margin-left: 40px;
+
+          li {
+            margin: 4px auto;
+            font-size: 1.05em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .about_me {
+
+    h2 {
+      font-size: 2em;
+    }
+
+    .h2_line {
+      width: 45%;
+    }
+
+    .container_competences {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      padding: 1em 2em;
+
+      .fas {
+        font-size: 20em;
+      }
+
+      .competences_content_devops {
+        padding: 1em;
+      }
+    }
+
+    /* --------- CURSUS ---------- */
+
+    .container_formation {
+      padding: 1em 2em;
+
+      .formations {
+        width: 100%;
+
+        &::after {
+          display: none;
+        }
+
+        .formation_content {
+          margin: 1.5em 0;
+
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 762px) {
+  .about_me {
+
+    .container_competences {
+
+      .fas {
+        font-size: 15em;
+      }
+    }
+  }
+}

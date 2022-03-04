@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section class="row wrap sect_gen" id="home">
+
+        <div class="pattern-bottom"></div>
+
+        <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12 picture-home-content">
+
+            <div class="losange_home">
+                <div class="losange-img" data-aos="zoom-in"></div>
+            </div>
+        </div>
+        <div class="xLarge-6 large-6 medium-12 small-12 xSmall-12 description-home-content">
+            <span class="name" data-aos="zoom-in">Clément</span>
+            <span class="surname" data-aos="zoom-in">TEMPLE</span>
+            <span class="student" data-aos="zoom-in">EPSI Student's</span>
+            <span class="old" data-aos="zoom-in">21 ans</span>
+        </div>
+        <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 icon_responsive">
+            <div class="circle_icon circle_manga">
+                <button class="icon_button" id="button_manga">
+                    <img class="icon icon_manga" src="{{ asset('assets/img/icons-naruto.png') }}" alt="manga">
+                </button>
+            </div>
+
+            <div class="circle_icon circle_japon">
+                <button class="icon_button" id="button_japon">
+                    <img class="icon icon_japon" src="{{ asset('assets/img/temple.png') }}" alt="Japon"/>
+                </button>
+            </div>
+
+            <div class="circle_icon circle_mode">
+                <button class="icon_button" id="button_mode">
+                    <img class="icon icon_mode" src="{{ asset('assets/img/icon-sneaker.png') }}" alt="Mode"/>
+                </button>
+            </div>
+
+            <div class="circle_icon circle_sport">
+                <button class="icon_button" id="button_sport">
+                    <img class="icon icon_sport" src="{{ asset('assets/img/icon-ballon.png') }}" alt="Sport"/>
+                </button>
+            </div>
+        </div>
+
+        <div class="overlay overlay_manga" id="overlay_manga">
+            <div class="row wrap pop-up" id="pop-up_manga">
+                <div class="pop-pup_content">
+                    <img src="{{ asset('assets/img/mikey.png') }}" alt="Mickey Tokyo Revengers">
+                    <h2>
+                        Les Mangas et Animés
+                    </h2>
+                    <span id="btnclose_manga" class="btnclose">&times;</span>
+                    <p>Les mangas et les adaptations en animation de ces derniers sont l'une de mes passions.
+                        Les dessins, le sens de lecture, les histoires m'ont donné une attache à ce genre de livre.
+                        Les animés ont, quant à eux, bercé mon enfance et continuent encore aujourd'hui de
+                        m'accompagner.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay overlay_japon" id="overlay_japon">
+            <div class="row wrap pop-up" id="pop-up_japon">
+                <div class="pop-pup_content">
+                    <img src="{{ asset('assets/img/porte.png') }}" alt="Porte japonaise">
+                    <h2>
+                        Le Japon
+                    </h2>
+                    <span id="btnclose_japon" class="btnclose">&times;</span>
+                    <p>C'est grâce à la lecture des mangas que j'ai commencé à apprécier ce pays et le souhait de m'y rendre.
+                        Le mode de vie, les paysages et la culture m'attirent énormément et j'espère un jour pouvoir découvrir
+                        ce pays de mes propres yeux.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay overlay_sport" id="overlay_sport">
+            <div class="row wrap pop-up" id="pop-up_sport">
+                <div class="pop-pup_content">
+                    <img src="{{ asset('assets/img/ballon.png') }}" alt="Joueur de foot">
+                    <h2 class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
+                        Le Football
+                    </h2>
+                    <span id="btnclose_sport" class="btnclose">&times;</span>
+                    <p>Une coupe du monde en 2006, le plus grand joueur en action, une défaite en finale... Mais la
+                        naissance d'un nouveau passionné et amoureux de ce sport. C'est depuis l'âge de mes 6 ans
+                        que le football fait partie de moi. Le talent ne m'a pas été offert mais la passion fait partie de moi
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay overlay_mode" id="overlay_mode">
+            <div class="row wrap pop-up" id="pop-up_mode">
+                <div class="pop-pup_content">
+                    <img src="{{ asset('assets/img/snkrs.png') }}" alt="Sneakers">
+                    <h2>
+                        Les vêtements et sneakers
+                    </h2>
+                    <span id="btnclose_mode" class="btnclose">&times;</span>
+                    <p>Depuis petit, j'ai toujours aimé choisir mes vêtements et me tenter à différents styles.
+                        Je regarde régulièrement les boutiques en ligne.
+                        Ca fait quelques années aussi que je m'intéresse beaucoup au marché de la sneakers, de voir ce
+                        qui se fait. Qui plus est, qu'aujourd'hui, certaines paires sont considérées comme des objets de collection.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    {% include 'about_me.html.twig' %}
+    {% include 'framework.html.twig' %}
+{% endblock %}

@@ -1,0 +1,34 @@
+footer {
+  background-color: #100f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  span {
+    font-size: 14px;
+    padding: 20px;
+    color: #dddddd;
+    text-align: center;
+  }
+
+  .contact-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h4{
+      font-size: 1.25em;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      color: $primary-color;
+      padding: 20px 0;
+      text-decoration: underline;
+    }
+
+    span{
+      padding: 5px;
+    }
+  }
+}

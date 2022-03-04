@@ -1,0 +1,33 @@
+$primary-color: #124850;
+
+@import "../css/fonts.css";
+@import "navbar";
+@import "home";
+@import "a_propos";
+@import "framework";
+@import "contact-form";
+@import "footer";
+@import "login";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background: #383838;
+  background: -webkit-radial-gradient(right, #383838, #010101);
+  background: -moz-radial-gradient(right, #383838, #010101);
+  background: radial-gradient(to left, #383838, #010101);
+  background-repeat: no-repeat;
+}
+
+.row {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}

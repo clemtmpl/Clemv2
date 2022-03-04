@@ -1,0 +1,78 @@
+<section class="row wrap about_me">
+
+    <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 container_competences" id="competences">
+
+        <i class="fas fa-code"></i>
+
+        <div class="compétences">
+            <h2>Compétences</h2>
+            <div class="h2_line"></div>
+        </div>
+
+        <div class="competences_content_devops" data-aos="fade-down">
+            <h3>Mes compétences Devops</h3>
+
+
+            <div class="name_devops_skills">
+                <span class="skills_name">HTML5</span>
+                <div class="skills_bar">
+                    <div class="line-color orange">80%</div>
+                    <span class="waveskill"></span>
+                </div>
+
+                <span class="skills_name">CSS3</span>
+                <div class="skills_bar">
+                    <div class="line-color blue">70%</div>
+                    <span class="waveskill"></span>
+                </div>
+
+                <span class="skills_name">PHP</span>
+                <div class="skills_bar">
+                    <div class="line-color mauve">50%</div>
+                    <span class="waveskill"></span>
+                </div>
+
+                <span class="skills_name">MYSQL</span>
+                <div class="skills_bar">
+                    <div class="line-color jaune">50%</div>
+                    <span class="waveskill"></span>
+                </div>
+
+                <span class="skills_name">JAVASCRIPT</span>
+                <div class="skills_bar">
+                    <div class="line-color fluo">60%</div>
+                    <span class="waveskill"></span>
+                </div>
+
+                <span class="skills_name">PYTHON</span>
+                <div class="skills_bar">
+                    <div class="line-color cyan">30%</div>
+                    <span class="waveskill"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 container_formation" id="cursus">
+        <h2>Mon cursus</h2>
+
+        <div class="h2_line"></div>
+
+        <section class="formations">
+
+            {% for formation in formations %}
+                <div class="formation_content stage_vista" data-aos="fade-right">
+                    <h3>{{ formation.name }}</h3>
+                    <h4>{{ formation.DateDebut ? formation.DateDebut|date('d-m-Y')}} - {{ formation.dateFin ? formation.dateFin|date('d-m-Y')}} </h4>
+
+                    <div class="acquis">
+                        {{ formation.acquis|raw }}
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </div>
+</section>
